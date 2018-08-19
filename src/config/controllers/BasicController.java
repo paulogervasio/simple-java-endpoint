@@ -1,10 +1,10 @@
-package hello;
+package config.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HelloController {
+public class BasicController {
 
 	@RequestMapping("/")
 	public String index() {

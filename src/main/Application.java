@@ -1,4 +1,4 @@
-package hello;
+package main;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,7 +9,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan("config")
 @SpringBootApplication
 public class Application {
 
