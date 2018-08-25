@@ -14,7 +14,7 @@ WORKDIR simple-java-endpoint-master
 RUN mvn clean install
 WORKDIR target
 
-CMD ["${PATH}/java -jar", " simple-java-endpoint-0.1.0.jar"]
+CMD ["/usr/bin/java", "-jar", "simple-java-endpoint-0.1.0.jar"]
 
 EXPOSE 8081
 
