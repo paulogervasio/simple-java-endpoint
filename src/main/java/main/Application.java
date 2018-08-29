@@ -18,7 +18,7 @@ public class Application {
 	public static void main(String[] args) {
 
 		Map<String, Object> mapProp = new HashMap<String, Object>();
-		mapProp.put("server.port", "8083");
+		mapProp.put("server.port", "8081");
 		
 
 		SpringApplication app = new SpringApplication(Application.class);
