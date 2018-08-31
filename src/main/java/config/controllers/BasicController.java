@@ -20,7 +20,9 @@ public class BasicController {
 
 		String msg = "Spring Boot";
 		msg += InetAddress.getLoopbackAddress().getHostAddress()  + "-";
-		msg += InetAddress.getLoopbackAddress().getHostName()  + "-";
+		msg += InetAddress.getLoopbackAddress().getHostName()  + "----------";
+		
+		msg += System.getenv("HOSTNAME");
 		
 		return msg;
 	}

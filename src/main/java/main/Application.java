@@ -13,20 +13,18 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan("config")
 @SpringBootApplication
-public class Application { 
+public class Application {
 
 	public static void main(String[] args) {
 
 		Map<String, Object> mapProp = new HashMap<String, Object>();
 		mapProp.put("server.port", "8081");
-		
 
 		SpringApplication app = new SpringApplication(Application.class);
 		app.setDefaultProperties(mapProp);
 		app.run(args);
 
 	}
-	
 
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
@@ -36,10 +34,9 @@ public class Application {
 
 			String[] beanNames = ctx.getBeanDefinitionNames();
 			Arrays.sort(beanNames);
-		/*	for (String beanName : beanNames) {
-				System.out.println(beanName);
-			}
-*/
+			/*
+			 * for (String beanName : beanNames) { System.out.println(beanName); }
+			 */
 		};
 	}
 
