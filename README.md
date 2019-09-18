@@ -1,23 +1,37 @@
-# simple-java-endpoint - Using Keycloack
+# simple-java-endpoint - Using Jaeger
 A very simple java endpoint example, using spring-boot-starter.
 
-## Keycloack
-### To run keycloack
-docker run -p 8180:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=123456 jboss/keycloak
+
+```
+docker run -ti -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 16686:16686 -p 9411:9411 jaegertracing/all-in-one
+```
 
 
-### Access:
-http://localhost:8180
+After clone this project execute:
 
-### and create:
-realm=springbootrealm
-client=login-app
-role=user
+```
+mvn clean install
+```
 
-and users to assign to the role created.
+After run the server:
 
+```
+java -jar target/simple-java-endpoint-0.1.0.jar
+```
 
+Call the endpoint:
 
+```
+curl -v localhost:9090/
+```
+
+And run in the browser:
+
+```
+http://localhost:16686
+```
+
+Click in find traces and visualize all Traces input.
 
 
 
