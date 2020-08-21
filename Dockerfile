@@ -1,10 +1,10 @@
-from openjdk:8
+from maven:3.6.3-jdk-8
 
 # TODO - create a custom maven install
-RUN echo "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
-RUN echo "deb-src http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install -y maven
+#RUN echo "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
+#RUN echo "deb-src http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
+#RUN apt-get update
+#RUN apt-get install -y maven
 #
 
 RUN wget https://github.com/paulogervasio/simple-java-endpoint/archive/master.zip
