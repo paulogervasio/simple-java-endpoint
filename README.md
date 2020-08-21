@@ -9,4 +9,4 @@ A very simple java endpoint example, using spring-boot-starter.
 docker build -t paulogervasio:simple-java-endpoint .
 
 ### To create and run a new container:
-docker run -tid -p8089:8080 paulogervasio:simple-java-endpoint
+docker run -ti -p8089:8080 paulogervasio:simple-java-endpoint
